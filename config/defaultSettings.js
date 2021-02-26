@@ -10,6 +10,10 @@ const proSettings = {
   headerHeight: 64,
   title: 'xxx管理系统',
   pwa: false,
+  menu: {
+    locale: false,
+  },
   iconfontUrl: '',
+ 
 };
 export default proSettings;

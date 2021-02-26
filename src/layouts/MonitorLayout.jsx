@@ -79,6 +79,14 @@ const MonitorLayout = (props) => {
       formatMessage={formatMessage}
       {...props}
       {...settings}
+      menuRender={false}
+      headerContentRender={() => {
+        return <div style={{display: 'flex', alignItems: 'center'}}>
+                 <img src={logo} style={{width: '36px', height: '36px'}}/>
+                 <div style={{marginLeft: '10px', fontWeight: 'bold', fontSize: '18px'}}>{settings.title}</div>
+              </div>
+      }}
+      headerTheme="dark"
       onCollapse={handleMenuCollapse}
       onMenuHeaderClick={() => history.push('/')}
       menuItemRender={(menuItemProps, defaultDom) => {
@@ -109,13 +117,9 @@ const MonitorLayout = (props) => {
           <span>{route.breadcrumbName}</span>
         );
       }}
-      menuRender={false}
       menuDataRender={menuDataRender}
       rightContentRender={() => <RightContent />}
-      postMenuData={(menuData) => {
-        menuDataRef.current = menuData || [];
-        return menuData || [];
-      }}
+      postMenuData={() => []}
     >
       <Authorized authority={authorized.authority} noMatch={noMatch}>
         {children}

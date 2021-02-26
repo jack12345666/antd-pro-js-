@@ -36,7 +36,6 @@ const UserModal = (props) => {
             }else {
                 message.error(rsp.msg)
             }
-        
     }
    
     return (

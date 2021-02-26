@@ -120,14 +120,12 @@ const UserSetting = (props) => {
         {
             title: '用户账号',
             width: 100,
-            key: 'id',
             dataIndex: 'userName',
             ellipsis: true,
             align: 'center'
         },
         {
             title: '用户名',
-            key: 'id',
             width: 120,
             dataIndex: 'fullName',
             ellipsis: true,
@@ -135,14 +133,12 @@ const UserSetting = (props) => {
         },
         {
             title: '手机号码',
-            key: 'id',
             width: 120,
             align: 'center',
             dataIndex: 'phone',
         },
         {
             title: '邮箱',
-            key: 'id',
             width: 120,
             ellipsis: true,
             align: 'center',
@@ -150,7 +146,6 @@ const UserSetting = (props) => {
         },
         {
             title: '创建时间',
-            key: 'id',
             width: 140,
             ellipsis: true,
             align: 'center',
@@ -158,7 +153,6 @@ const UserSetting = (props) => {
         },
         {
             title: '状态',
-            key: 'option',
             width: 80,
             valueType: 'option',
             align: 'center',
@@ -169,7 +163,6 @@ const UserSetting = (props) => {
         {
             title: '操作',
             width: 120,
-            key: 'option',
             valueType: 'option',
             align: 'center',
             render: (record) => [

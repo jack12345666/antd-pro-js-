@@ -35,7 +35,6 @@ export default () => {
       if(e.target.value) {
           setSearchText(e.target.value)
           console.log(searchText)
-          // message.success(e.target.value)
       }
       
     }
