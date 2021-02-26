@@ -1,0 +1,112 @@
+@import '~antd/es/style/themes/default.less';
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+:global(.ant-pro-global-header) {
+  background: #001529;
+  color: #fff;
+}
+:global(.ant-pro-global-header-layout-side) {
+  background: #001529;
+  color: #fff;
+}
+:global(ul.ant-menu.ant-menu-dark.ant-pro-sider-menu.ant-menu-root.ant-menu-inline) {
+  background-color: #213a52;
+}
+:global(ul.ant-menu.ant-menu-dark.ant-menu-inline-collapsed.ant-pro-sider-menu.ant-menu-root.ant-menu-vertical) {
+  background-color: #213a52;
+  margin: 0;
+}
+:global(li.ant-menu-item.ant-menu-item-only-child.ant-pro-sider-collapsed-button) {
+  background-color: #213a52;
+  margin: 0;
+}
+.changeText {
+   display: flex;
+   align-items: center;
+}
+.text {
+  cursor: pointer;
+}
+.fg {
+  padding: 0 10px 0 15px;
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.right {
+  display: flex;
+  float: right;
+  height: 48px;
+  margin-left: auto;
+  overflow: hidden;
+  .action {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > span {
+      vertical-align: middle;
+    }
+    &:hover {
+      background: @pro-header-hover-bg;
+    }
+    &:global(.opened) {
+      background: @pro-header-hover-bg;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: ~'calc((@{layout-header-height} - 24px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.dark {
+  .action {
+    color: rgba(255, 255, 255, 0.85);
+    > span {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    &:hover,
+    &:global(.opened) {
+      background: @primary-color;
+    }
+  }
+}
+
+:global(.ant-pro-global-header) {
+  .dark {
+    .action {
+      color: @text-color;
+      > span {
+        color: @text-color;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.85);
+        > span {
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+  }
+}
